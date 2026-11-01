@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>الحقيبة التربوية للأستاذ — المنصة الرسمية 2026</title>
+  <meta name="theme-color" content="#2563eb">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #2563eb;
+      --primary-dark: #1d4ed8;
+      --primary-soft: #eff6ff;
+      --emerald: #16a34a;
+      --emerald-soft: #ecfdf5;
+      --bg: #f8fafc;
+      --surface: #ffffff;
+      --border: #e2e8f0;
+      --text: #0f172a;
+      --muted: #64748b;
+      --radius: 14px;
+      --shadow: 0 4px 20px -4px rgba(0,0,0,0.08);
+      --font: 'IBM Plex Sans Arabic', system-ui, -apple-system, sans-serif;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: var(--font); }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .container {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 0 20px;
+      width: 100%;
+    }
+
+    /* Top Nav */
+    header {
+      background: #fff;
+      border-bottom: 1px solid var(--border);
+      padding: 14px 0;
+    }
+    .nav-box {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .brand-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+    }
+    .brand-text h1 {
+      font-size: 16px;
+      font-weight: 800;
+      color: #0f172a;
+      line-height: 1.2;
+    }
+    .brand-text span {
+      font-size: 12px;
+      color: var(--muted);
+      font-weight: 500;
+    }
+    .badge-dev {
+      background: var(--primary-soft);
+      color: var(--primary);
+      font-size: 12px;
+      font-weight: 700;
+      padding: 5px 12px;
+      border-radius: 99px;
+      border: 1px solid #dbeafe;
+    }
+
+    /* Main Compact Hero */
+    main {
+      flex: 1;
+      padding: 30px 0 40px;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    .hero-card {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 34px 28px;
+      box-shadow: var(--shadow);
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-card::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; height: 4px;
+      background: linear-gradient(90deg, var(--primary), #38bdf8, var(--emerald));
+    }
+    .edition-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: #f1f5f9;
+      color: #475569;
+      font-size: 12px;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 99px;
+      margin-bottom: 12px;
+    }
+    .hero-title {
+      font-size: 28px;
+      font-weight: 800;
+      color: #0f172a;
+      line-height: 1.35;
+      margin-bottom: 10px;
+    }
+    .hero-title span {
+      color: var(--primary);
+    }
+    .hero-desc {
+      font-size: 15px;
+      color: var(--muted);
+      max-width: 720px;
+      margin: 0 auto 20px;
+    }
+
+    /* Price Pill */
+    .price-strip {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      background: var(--emerald-soft);
+      border: 1.5px solid #a7f3d0;
+      padding: 8px 20px;
+      border-radius: 12px;
+      margin-bottom: 24px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .price-strip .amt {
+      font-size: 24px;
+      font-weight: 800;
+      color: var(--emerald);
+      direction: ltr;
+    }
+    .price-strip .lbl {
+      font-size: 13.5px;
+      font-weight: 700;
+      color: #065f46;
+    }
+
+    /* Primary Actions */
+    .cta-row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 24px;
+    }
+    .btn-download {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+      color: #fff;
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: 700;
+      padding: 13px 26px;
+      border-radius: 12px;
+      box-shadow: 0 4px 14px rgba(37,99,235,0.3);
+      transition: all 0.15s ease;
+    }
+    .btn-download:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(37,99,235,0.4);
+      color: #fff;
+    }
+    .btn-wa {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #25d366;
+      color: #fff;
+      text-decoration: none;
+      font-size: 14.5px;
+      font-weight: 700;
+      padding: 13px 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 14px rgba(37,211,102,0.25);
+      transition: all 0.15s;
+    }
+    .btn-wa:hover {
+      background: #20ba5a;
+      transform: translateY(-1px);
+      color: #fff;
+    }
+    .btn-tg {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #229ed9;
+      color: #fff;
+      text-decoration: none;
+      font-size: 14.5px;
+      font-weight: 700;
+      padding: 13px 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 14px rgba(34,158,217,0.25);
+      transition: all 0.15s;
+    }
+    .btn-tg:hover {
+      background: #1b8ec5;
+      transform: translateY(-1px);
+      color: #fff;
+    }
+
+    /* Features Badges */
+    .quick-badges {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: wrap;
+      font-size: 12.5px;
+      color: #475569;
+      font-weight: 600;
+      padding-top: 14px;
+      border-top: 1px solid #f1f5f9;
+    }
+    .quick-badges span {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    /* 2 Tools Compact Grid */
+    .tools-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+    }
+    .tool-card {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 20px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    }
+    .tool-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+    .tool-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 10px;
+      background: var(--primary-soft);
+      color: var(--primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .tool-card.orange .tool-icon {
+      background: #fff7ed;
+      color: #ea580c;
+    }
+    .tool-header h3 {
+      font-size: 16px;
+      font-weight: 700;
+      color: #0f172a;
+    }
+    .tool-card p {
+      font-size: 13px;
+      color: var(--muted);
+      line-height: 1.55;
+      margin-bottom: 12px;
+    }
+    .tool-points {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      font-size: 12.5px;
+      color: #334155;
+      font-weight: 600;
+    }
+    .tool-points li::before {
+      content: "✔";
+      color: var(--emerald);
+      margin-left: 6px;
+      font-size: 11px;
+    }
+
+    /* Payment & Activation Strip */
+    .info-strip {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 20px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .info-strip h4 {
+      font-size: 14.5px;
+      font-weight: 800;
+      color: #0f172a;
+      margin-bottom: 4px;
+    }
+    .info-strip p {
+      font-size: 12.5px;
+      color: var(--muted);
+    }
+    .pay-methods {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    .pay-tag {
+      background: #f1f5f9;
+      border: 1px solid #e2e8f0;
+      color: #1e293b;
+      font-size: 12px;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 6px;
+    }
+
+    /* Footer */
+    footer {
+      background: #fff;
+      border-top: 1px solid var(--border);
+      padding: 18px 0;
+      font-size: 12.5px;
+      color: var(--muted);
+      text-align: center;
+      margin-top: auto;
+    }
+    footer b { color: #0f172a; }
+
+    @media (max-width: 768px) {
+      .hero-title { font-size: 22px; }
+      .tools-grid { grid-template-columns: 1fr; }
+      .info-strip { flex-direction: column; text-align: center; }
+      .pay-methods { justify-content: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="container nav-box">
+      <div class="brand">
+        <div class="brand-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/><path d="M8 7h8M8 11h6"/></svg>
+        </div>
+        <div class="brand-text">
+          <h1>الحقيبة التربوية للأستاذ</h1>
+          <span>مناهج الجيل الثاني في الجزائر 2026</span>
+        </div>
+      </div>
+      <div class="badge-dev">
+        برمجة وتطوير: <b>Hakim Bouzourdaz</b>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container">
+
+    <!-- Hero Card -->
+    <div class="hero-card">
+      <div class="edition-tag">
+        🇩🇿 تطبيق سطح مكتب مستقل — خفيف وبدون إنترنت 100%
+      </div>
+
+      <h2 class="hero-title">
+        إعداد <span>المذكرات التربوية</span> والفروض والاختبارات باحترافية
+      </h2>
+
+      <p class="hero-desc">
+        برنامج متكامل يجمع بين تحضير المذكرات البيداغوجية الرسمية وتصميم مواضيع الفروض والامتحانات مع الحل النموذجي وسلالم التنقيط، مع التصدير المباشر والقابل للتعديل إلى Word و PDF.
+      </p>
+
+      <!-- Price Strip -->
+      <div class="price-strip">
+        <span class="lbl">سعر رخصة البرنامج الدائمة (مدى الحياة):</span>
+        <span class="amt">2000 دج</span>
+        <span class="lbl" style="color: #047857;">(دفعة واحدة فقط لجهازك • بدون أي اشتراك)</span>
+      </div>
+
+      <!-- Action Buttons -->
+      <div class="cta-row">
+        <a href="dist/الحقيبة التربوية للأستاذ.exe" download="الحقيبة التربوية للأستاذ.exe" class="btn-download" title="تحميل ملف البرنامج المباشر">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          <span>تحميل البرنامج (EXE — الحجم 2.87 MB)</span>
+        </a>
+
+        <a href="https://wa.me/213549523594" target="_blank" rel="noopener noreferrer" class="btn-wa">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.41a8.217 8.217 0 0 1 2.41 5.83c0 4.54-3.7 8.24-8.24 8.24-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.196 8.196 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24m-3.53 3.42c-.19 0-.41.07-.63.32-.22.25-.84.82-.84 2s.86 2.32.98 2.48c.12.16 1.69 2.58 4.1 3.62.57.25 1.02.4 1.37.51.58.18 1.1.16 1.52.1.46-.07 1.42-.58 1.62-1.14.2-.56.2-1.04.14-1.14-.06-.1-.22-.16-.46-.28s-1.42-.7-1.64-.78-.38-.12-.54.12-.62.78-.76.94-.28.18-.52.06c-.24-.12-1.01-.37-1.93-1.19-.71-.63-1.19-1.41-1.33-1.65-.14-.24-.01-.37.11-.49.11-.11.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.54-1.3-.74-1.78-.2-.47-.4-.41-.55-.42-.14-.01-.3-.01-.46-.01z"/></svg>
+          <span dir="ltr">WhatsApp: 0549523594</span>
+        </a>
+
+        <a href="https://t.me/hbouzourdaz" target="_blank" rel="noopener noreferrer" class="btn-tg">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 0 0-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.75-.55 2.92-1.27 4.86-2.11 5.83-2.52 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/></svg>
+          <span>Telegram: @hbouzourdaz</span>
+        </a>
+      </div>
+
+      <!-- Quick Trust Badges -->
+      <div class="quick-badges">
+        <span>⚡ أوفلاين 100% بدون نت</span>
+        <span>•</span>
+        <span>📝 تصدير وورد (Word) مفتوح</span>
+        <span>•</span>
+        <span>📐 محرر قوانين بفيزياء ورياضيات</span>
+        <span>•</span>
+        <span>🔒 ترخيص عتادي محمي مدى الحياة</span>
+      </div>
+    </div>
+
+    <!-- The 2 Tools Compact Cards -->
+    <div class="tools-grid">
+      <!-- Mudhakkirati -->
+      <div class="tool-card">
+        <div class="tool-header">
+          <div class="tool-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+          </div>
+          <h3>1. مُذكّرتي — مُعِدّ المذكرات التربوية</h3>
+        </div>
+        <p>إعداد المذكرات البيداغوجية وفق المعايير الوزارية لمناهج الجيل الثاني بضغطة زر:</p>
+        <ul class="tool-points">
+          <li>بطاقة بيداغوجية مع مؤشرات الكفاءة وسيرورة التعلم.</li>
+          <li>بنك اقتراحات ذكي للأنشطة والوضعيات التعلمية.</li>
+          <li>محرر علاقات وقوانين فيزيائية بصرية دون تعقيد برمجي.</li>
+          <li>تصدير فوري ونظيف إلى ملف Word (.doc) قابل للتعديل.</li>
+        </ul>
+      </div>
+
+      <!-- Mueedd -->
+      <div class="tool-card orange">
+        <div class="tool-header">
+          <div class="tool-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+          </div>
+          <h3>2. مُعِدّ — إعداد الفروض والاختبارات</h3>
+        </div>
+        <p>تصميم امتحانات وفروض رسمية مع الحل النموذجي وسلم التنقيط في ثوانٍ:</p>
+        <ul class="tool-points">
+          <li>ترويسة رسمية مطابقة لقوالب وزارة التربية الوطنية.</li>
+          <li>توليد الحل النموذجي مع سلم التنقيط (Barème) في جدول منسق.</li>
+          <li>التبديل الفوري بين موضوع الامتحان والحل بضغطة زر.</li>
+          <li>تنسيق صفحات A4 جاهزة للسحب والطباعة فوراً.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Activation & Payment Strip -->
+    <div class="info-strip">
+      <div>
+        <h4>طريقة التفعيل السريعة (3 خطوات):</h4>
+        <p>1. شغّل البرنامج ➔ 2. انسخ رمز جهازك (Machine ID) ➔ 3. أرسله للمطور لاستلام مفتاحك الدائم.</p>
+      </div>
+
+      <div class="pay-methods">
+        <span class="pay-tag">💳 بريدي موب (BaridiMob)</span>
+        <span class="pay-tag">🏦 الحساب البريدي (CCP)</span>
+        <span class="pay-tag">📱 فليكسي (Flexy)</span>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      الحقيبة التربوية للأستاذ لمناهج الجيل الثاني © 2026 — برمجة وتطوير: <b>Hakim Bouzourdaz</b>
+      &nbsp;|&nbsp;
+      هاتف / واتساب: <b dir="ltr">0549523594</b>
+    </div>
+  </footer>
+
+</body>
+</html>
